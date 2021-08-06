@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Plant Finder Names
+    </title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Sam Heckle" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/1470ecd77f.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1>plant finder names</h1>
+
+    <h2>how to</h2>
+    <p>
+      please wait for the plant model to load, i'm validating webcam and loading all the cool plant names :)
+    </p>
+
+    <section id="demos" class="invisible">
+      <p>
+        point the camera at a plant you want to name! when ready click "enable webcam" below and accept
+        access to the webcam when the browser asks. the webcam will automatically take a photo when a plant is detected,
+        feel free to use this as many times as you want!
+      </p>
+
+      <div id="liveView" class="videoView">
+        <button id="webcamButton">enable webcam</button>
+        <!--         <button id="screenshot" class="invisible-button"></button> -->
+        <video id="webcam" autoplay playsinline class="invisible-button"></video>
+      </div>
+    </section>
+
+    <canvas id="canvas" class="invisible-button"></canvas>
+    <div class='image-container'>
+      <div id='fake-nav' class='fake-nav invisible-button'>      
+        <h3 class='plant-finder-title'>
+        plant finder
+      </h3>
+        <i class="fas fa-heart"></i>
+      </div>
+      <img class="screenshot-image invisible-button " alt="" />
+      <h2 id="name" class="invisible-button">
+        
+      </h2>
+      <div id='sparkle-div' class='invisible-button'>
+        <p class="sparkle">
+          ✨
+        </p>
+        <p class="sparkle">
+          ✨
+        </p>
+      </div>
+      
+      <footer class='invisible-button'>
+      <hr >
+        <p>
+          take a screenshot, it will last longer ;)
+        </p>
+      </footer>
+<!--       <img
+        src="https://cdn.glitch.com/20c1f2e2-3e67-4557-a34e-7b7fe57cc877%2Fpetfinder.jpeg?v=1628211424658"
+      /> -->
+      
+    </div>
+
+    <!-- Include the Glitch button to show what the webpage is about and
+         to make it easier for folks to view source and remix -->
+
+    <!-- Import TensorFlow.js library -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"
+      type="text/javascript"
+    ></script>
+
+    <!-- Load the coco-ssd model to use to recognize things in images -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+
+    <!-- Import the page's JavaScript to do some stuff -->
+    <script src="/pet-finder-api.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
